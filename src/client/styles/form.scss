@@ -1,12 +1,29 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
-}
+  border-radius: 3px;
+  margin-top: 30px;
 
-input {
+  input {
     padding: 5px 20px;
     width: 100%;
-    line-height: 16px;
+    // line-height: 20px;
+    height: 2.5em;
     margin: 10px 0;
+    border: none;
+    background-color: #330066;
+    color: white;
+    font: inherit;
+  }
+
+  input:hover {
+    opacity: 80%;
+    cursor: pointer;
+  }
+
+  #name {
+    resize: vertical;
+    overflow: scroll;
+    width: 100%;
+    font-family: "Open Sans";
+    height: 100px;
+  }
 }

@@ -3,7 +3,11 @@
     <head>
         <link rel="shortcut icon" href="#" />
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>NLP Text analysis</title>
+        <link
+      href="https://fonts.googleapis.com/css?family=Alata|Open Sans:300&display=swap"
+      rel="stylesheet"
+    />
         <!-- <link rel="stylesheet" href="src/client/styles/resets.scss">
         <link rel="stylesheet" href="src/client/styles/base.scss">
         <link rel="stylesheet" href="src/client/styles/header.scss">
@@ -24,15 +28,35 @@
 
         <main>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <strong><h1>Welcome to the NLP text analysis!</h1></strong>
+                <form class="form" onsubmit="return Client.handleSubmit(event)">
+                    <textarea id="name" type="text" name="input" value="" placeholder="Paste your text here..."></textarea>
+                    <input type="submit" name="" value="submit">
                 </form>
             <section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <strong><h2>Text analysis results:</h2></strong>
+                <div id="results" style="overflow-x:auto;">
+                    <table>
+                        <tr>
+                          <th>Criteria</th>
+                          <th>Result</th>
+                        </tr>
+                        <tr>
+                          <td>Is this text objective or subjective?</td>
+                          <td id='subjectivity'></td>
+                        </tr>
+                        <tr>
+                          <td>How confident is the analysis?</td>
+                          <td id='confidence'></td>
+                        </tr>
+                        <tr>
+                            <td>Is this text ironic?</td>
+                            <td id='irony'></td>
+                          </tr>
+                      </table> 
+                </div>
             </section>
         </main>
 
