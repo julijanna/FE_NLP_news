@@ -38,5 +38,13 @@ function getSentimentResponse(req, res) {
     }
   )
     .then((response) => response.json())
-    .then((body) => res.send(body));
+    .then((body) => res.send(body))
+    .catch((error) =>
+      res.send({
+        status: {
+          code: "offline",
+          msg: error,
+        },
+      })
+    );
 }
